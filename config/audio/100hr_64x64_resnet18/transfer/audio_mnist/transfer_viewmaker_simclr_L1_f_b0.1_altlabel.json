@@ -1,0 +1,33 @@
+{
+    "exp_base": null,
+    "exp_name": "transfer_viewmaker_audio_mnist_simclr_L1_f_b0.1_100hour_64x64_resnet18",
+    "system": "TransferViewMakerAudioMNISTSystem",
+    "cuda": true,
+    "gpu_device": 0,
+    "seed": 1337,
+    "data_loader_workers": 8,
+    "data_params": {
+        "input_size": 64,
+        "noise_volume": 0.05,
+        "alternate_label": true
+    },
+    "model_params": {
+        "use_prepool": true
+    },
+    "pretrain_model": {
+        "exp_dir": "/mnt/fs1/atamkin/feature_suppression_xiluo/experiments/pretrain_viewmaker_audiomnist_simclr_L1_forced_b01_100hour_64x64_resnet18/",
+        "checkpoint_name": "epoch=199.ckpt"
+    },
+    "optim_params": {
+        "batch_size": 256,
+        "learning_rate": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 0,
+        "validate_freq": 1,
+        "patience": 10
+    },
+    "num_epochs": 100,
+    "validate": true,
+    "copy_checkpoint_freq": 5,
+    "continue_from_checkpoint": null
+}
