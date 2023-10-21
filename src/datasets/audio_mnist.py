@@ -175,7 +175,7 @@ class AudioMNISTTwoViews(AudioMNIST):
 
     def __getitem__(self, index):
         index, spectrum1, label = super().__getitem__(index)
-        _, spectrum2, _ = super().__getitem__(index)
+        __, spectrum2, _ = super().__getitem__(index)
 
         return index, spectrum1, spectrum2, label
 
